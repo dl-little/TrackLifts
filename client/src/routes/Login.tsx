@@ -20,6 +20,10 @@ const Login = () => {
   }, []);
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
+    if ( errorMessage.length ) {
+      setErrorMessage('');
+    }
+
     switch (e.target.id) {
       case 'password':
         setPassword(e.target.value);
