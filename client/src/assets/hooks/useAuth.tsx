@@ -7,7 +7,7 @@ type AuthFunc = (email: string, password: string) => void
 
 export const AuthProvider: React.FC<PropsWithChildren> = ({children}) => {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged( FIREBASE_AUTH, (user) => {
@@ -41,8 +41,9 @@ export const AuthProvider: React.FC<PropsWithChildren> = ({children}) => {
     signUp,
     logOut,
     loading,
+    setLoading
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }), [user])
+  }), [user, loading])
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

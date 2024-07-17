@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   // @ts-expect-error We do not provide a default config in context.
-  const { signIn, signUp, loading } = useAuth();
+  const { signIn, signUp, loading, setLoading } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
@@ -63,6 +63,7 @@ const Login = () => {
             navigate("/");
           })
           .catch((error: FirebaseError) => {
+            setLoading(false);
             setErrorMessage(
               getErrorMessage(error.code)
             )
@@ -74,6 +75,7 @@ const Login = () => {
             navigate("/");
           })
           .catch((error: FirebaseError) => {
+            setLoading(false);
             setErrorMessage(
               getErrorMessage(error.code)
             )
