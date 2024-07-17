@@ -1,7 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import './assets/css/App.css';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider
+} from '@apollo/client';
 
 const client = new ApolloClient({
   uri: 'https://flyby-router-demo.herokuapp.com/',
@@ -9,9 +14,9 @@ const client = new ApolloClient({
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
     <ApolloProvider client={client}>
-        <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <App />
     </ApolloProvider>
-)
+  </React.StrictMode>
+);
