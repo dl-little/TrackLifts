@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import variables from '../scss/abstracts/_shared.module.scss';
-const { quarterGap, halfGap, darkPrimary } = variables;
+const { quarterGap, halfGap, darkError, bold } = variables;
+
+export const Heading = styled.h1``;
 
 export const FormGroup = styled.div`
   display: flex;
@@ -27,8 +29,8 @@ export const AppButton = styled.button`
 `;
 
 export const ErrorMessage = styled.p`
-  color: ${darkPrimary};
-  font-weight: bold;
+  color: ${darkError};
+  font-weight: ${bold};
   line-height: 1em;
 `;
 

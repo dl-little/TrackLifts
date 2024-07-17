@@ -1,6 +1,14 @@
 import { useState, useRef, useEffect, ChangeEvent, MouseEventHandler, useCallback } from "react";
 import { Column, Row } from "../assets/components/Layout";
-import { AppButton, FormGroup, AppInput, AppLabel, ErrorMessage, Spacer } from "../assets/components/Utils";
+import {
+  AppButton,
+  FormGroup,
+  AppInput,
+  AppLabel,
+  ErrorMessage,
+  Spacer,
+  Heading
+ } from "../assets/components/Utils";
 import { FirebaseError } from "firebase/app";
 import RenderIf from "../assets/components/RenderIf";
 import { useAuth } from "../assets/hooks/useAuth";
@@ -75,6 +83,7 @@ const Login = () => {
 
   return (
     <Column $disabled={!!loading}>
+      <Heading>TrackLifts</Heading>
       <FormGroup>
         <AppLabel htmlFor="email">Email Address</AppLabel>
         <AppInput
