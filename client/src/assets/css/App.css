@@ -52,6 +52,7 @@ h6 > a:hover, h6 > a:focus, h6 > a:focus-within, h6 > a > a:hover, h6 > a > a:fo
   color: #E09F3E;
 }
 
+@tailwind utilities;
 * {
   margin: 0;
   padding: 0;
