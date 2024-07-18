@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ErrorPage from './assets/components/ErrorPage.tsx';
 import PrivateRoutes from './routes/PrivateRoutes.tsx';
 import Dashboard from './routes/Dashboard.tsx';
@@ -17,10 +17,11 @@ const App = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/history" element={<History />} />
           </Route>
-          <Route element={<PublicLayout />}>
+          <Route errorElement={<ErrorPage />} element={<PublicLayout />}>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
           </Route>
+          <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
