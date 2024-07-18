@@ -1,4 +1,4 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
 
 interface IRenderIf extends PropsWithChildren {
   isTrue: boolean;

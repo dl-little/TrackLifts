@@ -5,8 +5,8 @@ import {
   ChangeEvent,
   MouseEventHandler,
   useCallback,
-} from "react";
-import { Column, Row } from "../assets/components/Layout";
+} from 'react';
+import { Column, Row } from '../assets/components/Layout';
 import {
   AppButton,
   FormGroup,
@@ -15,20 +15,20 @@ import {
   ErrorMessage,
   Spacer,
   Heading,
-} from "../assets/components/Utils";
-import { FirebaseError } from "firebase/app";
-import RenderIf from "../assets/components/RenderIf";
-import { useAuth } from "../assets/hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+} from '../assets/components/Utils';
+import { FirebaseError } from 'firebase/app';
+import RenderIf from '../assets/components/RenderIf';
+import { useAuth } from '../assets/hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
   // @ts-expect-error We do not provide a default config in context.
   const { signIn, signUp, loading, setLoading } = useAuth();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     inputRef.current?.focus();
@@ -36,11 +36,11 @@ const Login = () => {
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
     if (errorMessage.length) {
-      setErrorMessage("");
+      setErrorMessage('');
     }
 
     switch (e.target.id) {
-      case "password":
+      case 'password':
         setPassword(e.target.value);
         break;
       default:
@@ -50,24 +50,24 @@ const Login = () => {
 
   const getErrorMessage = useCallback((code: string) => {
     switch (code) {
-      case "auth/invalid-email":
-        return "Invalid email.";
-      case "auth/missing-password":
-        return "Missing password.";
-      case "auth/invalid-credential":
-        return "No profile found with those credentials.";
+      case 'auth/invalid-email':
+        return 'Invalid email.';
+      case 'auth/missing-password':
+        return 'Missing password.';
+      case 'auth/invalid-credential':
+        return 'No profile found with those credentials.';
       default:
-        return "Something went wrong. Please try again.";
+        return 'Something went wrong. Please try again.';
     }
   }, []);
 
   const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) => {
     const { id } = e.target as HTMLButtonElement;
     switch (id) {
-      case "in":
+      case 'in':
         signIn(email, password)
           .then(() => {
-            navigate("/");
+            navigate('/');
           })
           .catch((error: FirebaseError) => {
             setLoading(false);
@@ -77,7 +77,7 @@ const Login = () => {
       default:
         signUp(email, password)
           .then(() => {
-            navigate("/");
+            navigate('/');
           })
           .catch((error: FirebaseError) => {
             setLoading(false);

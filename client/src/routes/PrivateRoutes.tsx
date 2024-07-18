@@ -1,7 +1,7 @@
-import { Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "../assets/hooks/useAuth";
-import LoadingSpinner from "../assets/components/LoadingSpinner";
-import AuthLayout from "../assets/layouts/AuthLayout";
+import { Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from '../assets/hooks/useAuth';
+import LoadingSpinner from '../assets/components/LoadingSpinner';
+import AuthLayout from '../assets/layouts/AuthLayout';
 
 const PrivateRoutes = () => {
   //@ts-expect-error We're not providing a default.
@@ -14,7 +14,7 @@ const PrivateRoutes = () => {
   ) : loading ? (
     <LoadingSpinner />
   ) : (
-    <Navigate to={"/login/"} />
+    <Navigate to={'/login/'} />
   );
 };
 

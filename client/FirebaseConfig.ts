@@ -1,6 +1,6 @@
-import { initializeApp } from "firebase/app";
-import { initializeAuth, browserLocalPersistence } from "firebase/auth";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from 'firebase/app';
+import { initializeAuth, browserLocalPersistence } from 'firebase/auth';
+import { getAnalytics } from 'firebase/analytics';
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const authDomain = import.meta.env.VITE_AUTH_DOMAIN;

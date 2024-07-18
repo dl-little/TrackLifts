@@ -1,16 +1,16 @@
-import { PropsWithChildren } from "react";
-import { Column } from "../components/Layout";
-import NavigationBar from "../components/NavigationBar";
+import { PropsWithChildren } from 'react';
+import { Column } from '../components/Layout';
+import NavigationBar from '../components/NavigationBar';
 const routes = [
   {
-    title: "Home",
-    path: "/",
-    icon: "house",
+    title: 'Home',
+    path: '/',
+    icon: 'house',
   },
   {
-    title: "History",
-    path: "/history",
-    icon: "history",
+    title: 'History',
+    path: '/history',
+    icon: 'history',
   },
 ];
 

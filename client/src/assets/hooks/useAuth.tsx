@@ -4,7 +4,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
-} from "firebase/auth";
+} from 'firebase/auth';
 import {
   useState,
   useEffect,
@@ -12,8 +12,8 @@ import {
   createContext,
   useContext,
   useMemo,
-} from "react";
-import { FIREBASE_AUTH } from "../../../FirebaseConfig";
+} from 'react';
+import { FIREBASE_AUTH } from '../../../FirebaseConfig';
 // @ts-expect-error Do not need default.
 const AuthContext = createContext();
 type AuthFunc = (email: string, password: string) => void;

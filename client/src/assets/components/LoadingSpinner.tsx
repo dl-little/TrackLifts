@@ -1,4 +1,4 @@
-import { Column } from "./Layout";
+import { Column } from './Layout';
 
 const LoadingSpinner = () => {
   return (
