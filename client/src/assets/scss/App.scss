@@ -1,7 +1,9 @@
 @import 'abstracts';
 @import 'copy';
 
+@tailwind base;
 @tailwind utilities;
+@tailwind components;
 
 * {
 	margin: 0;
@@ -14,7 +16,6 @@ html {
 
 body {
 	font-size: 1.125rem;
-	color: $contrast;
 }
 
 html, body, #root {

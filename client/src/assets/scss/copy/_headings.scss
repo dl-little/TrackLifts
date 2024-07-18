@@ -19,13 +19,5 @@
 @for $i from 1 through 6 {
 	h#{$i}, h#{$i} > a {
 		@include fontLevels($i);
-		color: $primary;
-		transition: $transition;
-
-		& > a {
-			@include hovered {
-				color: $secondary;
-			}
-		}
 	}
 }

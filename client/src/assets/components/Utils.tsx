@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import variables from '../scss/abstracts/_shared.module.scss';
-const { quarterGap, halfGap, darkError, bold } = variables;
 
 export const Heading = styled.h1``;
 
@@ -8,15 +6,15 @@ export const FormGroup = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  gap: ${quarterGap};
+  gap: unset;
 
   &:not(:first-child) {
-    margin-block-start: ${halfGap}
+    margin-block-start: unset
   }
 `;
 
 export const AppInput = styled.input`
-  padding: ${halfGap};
+  padding: unset;
 `;
 
 export const AppLabel = styled.label`
@@ -24,13 +22,12 @@ export const AppLabel = styled.label`
 `;
 
 export const AppButton = styled.button`
-  padding: ${quarterGap} ${halfGap};
+  padding: unset;
   cursor: pointer;
 `;
 
 export const ErrorMessage = styled.p`
-  color: ${darkError};
-  font-weight: ${bold};
+  font-weight: unset;
   line-height: 1em;
 `;
 

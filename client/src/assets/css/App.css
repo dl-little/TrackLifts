@@ -1,58 +1,30 @@
 h1, h1 > a {
   font-size: 2em;
-  color: #335C67;
-  transition: all 0.2s ease-in-out;
-}
-h1 > a:hover, h1 > a:focus, h1 > a:focus-within, h1 > a > a:hover, h1 > a > a:focus, h1 > a > a:focus-within {
-  color: #E09F3E;
 }
 
 h2, h2 > a {
   font-size: 1.74em;
-  color: #335C67;
-  transition: all 0.2s ease-in-out;
-}
-h2 > a:hover, h2 > a:focus, h2 > a:focus-within, h2 > a > a:hover, h2 > a > a:focus, h2 > a > a:focus-within {
-  color: #E09F3E;
 }
 
 h3, h3 > a {
   font-size: 1.52em;
-  color: #335C67;
-  transition: all 0.2s ease-in-out;
-}
-h3 > a:hover, h3 > a:focus, h3 > a:focus-within, h3 > a > a:hover, h3 > a > a:focus, h3 > a > a:focus-within {
-  color: #E09F3E;
 }
 
 h4, h4 > a {
   font-size: 1.32em;
-  color: #335C67;
-  transition: all 0.2s ease-in-out;
-}
-h4 > a:hover, h4 > a:focus, h4 > a:focus-within, h4 > a > a:hover, h4 > a > a:focus, h4 > a > a:focus-within {
-  color: #E09F3E;
 }
 
 h5, h5 > a {
   font-size: 1.15em;
-  color: #335C67;
-  transition: all 0.2s ease-in-out;
-}
-h5 > a:hover, h5 > a:focus, h5 > a:focus-within, h5 > a > a:hover, h5 > a > a:focus, h5 > a > a:focus-within {
-  color: #E09F3E;
 }
 
 h6, h6 > a {
   font-size: 1em;
-  color: #335C67;
-  transition: all 0.2s ease-in-out;
-}
-h6 > a:hover, h6 > a:focus, h6 > a:focus-within, h6 > a > a:hover, h6 > a > a:focus, h6 > a > a:focus-within {
-  color: #E09F3E;
 }
 
+@tailwind base;
 @tailwind utilities;
+@tailwind components;
 * {
   margin: 0;
   padding: 0;
@@ -64,7 +36,6 @@ html {
 
 body {
   font-size: 1.125rem;
-  color: #230C0F;
 }
 
 html, body, #root {
@@ -81,7 +52,7 @@ html, body, #root {
   padding: 0 !important;
   white-space: nowrap !important;
   width: 1px !important;
-  color: #230C0F;
+  color: #1F2933;
 }
 
 /*# sourceMappingURL=App.css.map */

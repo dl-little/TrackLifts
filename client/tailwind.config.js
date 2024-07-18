@@ -6,11 +6,13 @@ export default {
   ],
   theme: {
     colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
       'primary': '#335C67',
       'secondary': '#E09F3E',
       'accent': '#D6A2AD',
       'tertiary': '#FFF3B0',
-      'contrast': '#230C0F',
+      'contrast': '#1F2933',
       'white': '#FFFFFF'
     },
   },
