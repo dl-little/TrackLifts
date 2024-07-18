@@ -1,5 +1,5 @@
 import Icons from './Icons';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import data from '../routes.json';
 const routes = data.routes as Route[];
 
@@ -19,14 +19,14 @@ const NavigationBar: React.FC = () => {
             className="flex-1 [&:not(:last-child)]:border-r-neutral-100 [&:not(:last-child)]:border-r-2"
             key={route.title}
           >
-            <Link
-              className="group w-full dark:bg-neutral-800 dark:hover:bg-neutral-900 dark:text-neutral-100 bg-neutral-300 hover:bg-neutral-400 text-neutral-900 font-bold py-2 px-4 text-center h-full flex justify-center"
+            <NavLink
+              className="group [&.active]:dark:bg-neutral-900 [&.active]:pointer-events-none [&.active>svg]:dark:fill-blue-300 [&.active>svg]:fill-blue-500 w-full dark:bg-neutral-800 dark:hover:bg-neutral-900 dark:text-neutral-100 bg-neutral-300 hover:bg-neutral-400 text-neutral-900 font-bold py-2 px-4 text-center h-full flex justify-center"
               to={route.path}
               title={route.title}
             >
               <p className="screen-reader-text">{route.title}</p>
               {Icons[route.icon]}
-            </Link>
+            </NavLink>
           </li>
         );
       })}
