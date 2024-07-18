@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
 h1, h1 > a {
   font-size: 2em;
 }
@@ -22,9 +26,6 @@ h6, h6 > a {
   font-size: 1em;
 }
 
-@tailwind base;
-@tailwind utilities;
-@tailwind components;
 * {
   margin: 0;
   padding: 0;
@@ -55,4 +56,3 @@ html, body, #root {
   color: #1F2933;
 }
 
-/*# sourceMappingURL=App.css.map */
