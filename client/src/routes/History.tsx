@@ -1,9 +1,9 @@
 const History = () => {
-	return (
-		<>
-			<p>history</p>
-		</>
-	)
-}
+  return (
+    <>
+      <p>history</p>
+    </>
+  );
+};
 
 export default History;

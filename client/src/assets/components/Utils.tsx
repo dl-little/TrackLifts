@@ -9,7 +9,7 @@ export const FormGroup = styled.div`
   gap: unset;
 
   &:not(:first-child) {
-    margin-block-start: unset
+    margin-block-start: unset;
   }
 `;
 
@@ -31,7 +31,7 @@ export const ErrorMessage = styled.p`
   line-height: 1em;
 `;
 
-export const Spacer = styled.span<{$height?: number}>`
+export const Spacer = styled.span<{ $height?: number }>`
   display: block;
-  height: ${props => props.$height || 1}em;
+  height: ${(props) => props.$height || 1}em;
 `;
