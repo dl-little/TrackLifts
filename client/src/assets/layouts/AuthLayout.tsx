@@ -1,18 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Column } from '../components/Layout';
 import NavigationBar from '../components/NavigationBar';
-const routes = [
-  {
-    title: 'Home',
-    path: '/',
-    icon: 'house',
-  },
-  {
-    title: 'History',
-    path: '/history',
-    icon: 'history',
-  },
-];
 
 const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
@@ -25,7 +13,7 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
       >
         {children}
       </Column>
-      <NavigationBar routes={routes} />
+      <NavigationBar />
     </Column>
   );
 };

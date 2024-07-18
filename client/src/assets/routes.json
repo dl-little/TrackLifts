@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "title": "Home",
+      "path": "/",
+      "icon": "House"
+    },
+    {
+      "title": "History",
+      "path": "/history",
+      "icon": "Calendar"
+    },
+    {
+      "title": "Settings",
+      "path": "/settings",
+      "icon": "Cog"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import ErrorPage from './assets/components/ErrorPage.tsx';
 import PrivateRoutes from './routes/PrivateRoutes.tsx';
 import Dashboard from './routes/Dashboard.tsx';
 import History from './routes/History.tsx';
+import Settings from './routes/Settings.tsx';
 import Login from './routes/Login.tsx';
 import SignUp from './routes/SignUp.tsx';
 import { AuthProvider } from './assets/hooks/useAuth.tsx';
@@ -16,6 +17,7 @@ const App = () => {
           <Route errorElement={<ErrorPage />} element={<PrivateRoutes />}>
             <Route path="/" element={<Dashboard />} />
             <Route path="/history" element={<History />} />
+            <Route path="/settings" element={<Settings />} />
           </Route>
           <Route errorElement={<ErrorPage />} element={<PublicLayout />}>
             <Route path="/login" element={<Login />} />
