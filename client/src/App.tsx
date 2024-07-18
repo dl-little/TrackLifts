@@ -4,7 +4,9 @@ import PrivateRoutes from './routes/PrivateRoutes.tsx';
 import Dashboard from './routes/Dashboard.tsx';
 import History from './routes/History.tsx';
 import Login from './routes/Login.tsx';
+import SignUp from './routes/SignUp.tsx';
 import { AuthProvider } from './assets/hooks/useAuth.tsx';
+import PublicLayout from './assets/layouts/PublicLayout.tsx';
 
 const App = () => {
   return (
@@ -15,7 +17,10 @@ const App = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/history" element={<History />} />
           </Route>
-          <Route path="/login" element={<Login />} />
+          <Route element={<PublicLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Route>
         </Routes>
       </AuthProvider>
     </BrowserRouter>

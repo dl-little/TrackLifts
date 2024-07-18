@@ -6,15 +6,16 @@ export const FormGroup = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  gap: unset;
+  gap: 0.45em;
 
   &:not(:first-child) {
-    margin-block-start: unset;
+    margin-block-start: 0.9em;
   }
 `;
 
 export const AppInput = styled.input`
-  padding: unset;
+  padding: 0.45em;
+  color: black;
 `;
 
 export const AppLabel = styled.label`
@@ -22,13 +23,14 @@ export const AppLabel = styled.label`
 `;
 
 export const AppButton = styled.button`
-  padding: unset;
+  padding: 0.45em 0.9em;
   cursor: pointer;
 `;
 
 export const ErrorMessage = styled.p`
-  font-weight: unset;
+  font-weight: bold;
   line-height: 1em;
+  color: red;
 `;
 
 export const Spacer = styled.span<{ $height?: number }>`

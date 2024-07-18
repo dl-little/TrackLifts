@@ -14,10 +14,10 @@ import { useAuth } from '../assets/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { Row } from '../assets/components/Layout';
 
-const Login = () => {
+const SignUp = () => {
   const navigate = useNavigate();
   // @ts-expect-error We do not provide a default config in context.
-  const { signIn, loading, setLoading } = useAuth();
+  const { signUp, loading, setLoading } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const emailRef = useRef<HTMLInputElement>(null);
@@ -27,6 +27,8 @@ const Login = () => {
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
     if (errorMessage.length) {
       setErrorMessage('');
+      emailRef.current?.setAttribute('aria-invalid', 'false');
+      passwordRef.current?.setAttribute('aria-invalid', 'false');
     }
 
     switch (e.target.id) {
@@ -40,7 +42,7 @@ const Login = () => {
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    signIn(email, password)
+    signUp(email, password)
       .then(() => {
         navigate('/');
       })
@@ -48,6 +50,7 @@ const Login = () => {
         setLoading(false);
         const { message, target } = getErrorMessage(error.code);
         setErrorMessage(message);
+        console.log(error.code);
 
         if (target.length) {
           switch (target) {
@@ -94,19 +97,19 @@ const Login = () => {
         <Row $justify="flex-start" $wrap="wrap">
           <AppButton
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            title="Login"
+            title="Sign Up"
             type="submit"
-            id="in"
+            id="up"
             disabled={!!loading}
           >
-            Login
+            Sign Up
           </AppButton>
-          <a href="/signup">Sign Up</a>
+          <a href="/login">Login</a>
         </Row>
       </FormGroup>
       <FormGroup>
         <RenderIf isTrue={!!errorMessage.length}>
-          <ErrorMessage id="error-message">{errorMessage}</ErrorMessage>
+          <ErrorMessage>{errorMessage}</ErrorMessage>
         </RenderIf>
         <RenderIf isTrue={!errorMessage.length}>
           <Spacer />
@@ -116,4 +119,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
