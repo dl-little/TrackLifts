@@ -1,7 +1,9 @@
+import { Plus } from '../assets/components/Icons';
+
 const Dashboard = () => {
   return (
     <>
-      <p>dash</p>
+      <Plus />
     </>
   );
 };
