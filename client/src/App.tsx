@@ -8,6 +8,7 @@ import Login from './routes/Login.tsx';
 import SignUp from './routes/SignUp.tsx';
 import { AuthProvider } from './assets/hooks/useAuth.tsx';
 import PublicLayout from './assets/layouts/PublicLayout.tsx';
+import WorkOut from './routes/WorkOut.tsx';
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/history" element={<History />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/edit/:id" element={<WorkOut />} />
+            <Route path="/create" element={<WorkOut />} />
           </Route>
           <Route errorElement={<ErrorPage />} element={<PublicLayout />}>
             <Route path="/login" element={<Login />} />
