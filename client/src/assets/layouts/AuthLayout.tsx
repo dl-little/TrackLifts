@@ -14,13 +14,14 @@ const AuthLayout: React.FC<PropsWithChildren> = ({ children }) => {
   }, []);
 
   return (
-    <Column $justify="space-between" className="relative">
+    <Column $justify="space-between" className="relative mb-[4%]">
       <Column
         $width={100}
         $justify="flex-start"
         $align="flex-start"
-        className="p-4 pb-0"
+        className="p-4"
       >
+        <h1 className="screen-reader-text">TrackLifts</h1>
         <button
           onClick={handleClick}
           title="Sign Out"

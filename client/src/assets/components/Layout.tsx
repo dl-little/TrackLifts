@@ -20,10 +20,10 @@ export const Column = styled.div<{
   flex-flow: column ${(props) => props.$wrap || 'nowrap'};
   justify-content: ${(props) => props.$justify || 'center'};
   align-items: ${(props) => props.$align || 'center'};
-  height: ${(props) => props.$height || 100}%;
+  height: ${(props) => (props.$height ? props.$height + '%' : 'unset')};
   width: ${(props) => (props.$width ? props.$width + '%' : 'unset')};
   opacity: ${(props) => (props.$disabled ? 0.7 : 1)};
-  gap: ${(props) => (props.$gap ? props.$gap + 'em' : '.9em')};
+  gap: ${(props) => (props.$gap ? props.$gap + 'em' : 'unset')};
   box-sizing: border-box;
 `;
 

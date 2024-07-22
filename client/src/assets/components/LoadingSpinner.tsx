@@ -2,7 +2,7 @@ import { Column } from './Layout';
 
 const LoadingSpinner = () => {
   return (
-    <Column>
+    <Column $height={100}>
       <div role="status">
         <svg
           aria-hidden="true"
