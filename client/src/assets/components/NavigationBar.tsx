@@ -20,7 +20,7 @@ const NavigationBar: React.FC = () => {
             key={route.title}
           >
             <NavLink
-              className="group [&.active]:dark:bg-neutral-900 [&.active]:pointer-events-none [&.active>svg]:dark:fill-blue-300 [&.active>svg]:fill-blue-500 w-full dark:bg-neutral-800 dark:hover:bg-neutral-900 dark:text-neutral-100 bg-neutral-300 hover:bg-neutral-400 text-neutral-900 font-bold py-2 px-4 text-center h-full flex justify-center"
+              className="group [&.active]:dark:bg-neutral-900 [&.active]:pointer-events-none [&.active>svg]:dark:fill-blue-300 [&.active>svg]:fill-blue-500 w-full dark:bg-neutral-800 dark:hover:bg-neutral-900 dark:text-neutral-100 bg-neutral-300 hover:bg-neutral-400 text-neutral-900 py-2 px-4 text-center h-full flex justify-center"
               to={route.path}
               title={route.title}
             >
