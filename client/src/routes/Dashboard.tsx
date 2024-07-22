@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Dashboard = () => {
   return (
     <>
+      <h2 className="text-lg font-semibold p-4">Home</h2>
       <Link
         title="New Workout"
         to="/create"

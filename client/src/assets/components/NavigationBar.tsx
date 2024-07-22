@@ -13,6 +13,7 @@ type Route = {
 const NavigationBar: React.FC = () => {
   return (
     <ul className="inline-flex fixed bottom-0 left-0 w-full min-h-[4%]">
+      <h2 className="screen-reader-text">Navigation</h2>
       {routes.map((route: Route) => {
         return (
           <li
