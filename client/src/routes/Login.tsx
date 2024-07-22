@@ -13,6 +13,7 @@ import RenderIf from '../assets/components/RenderIf';
 import { useAuth } from '../assets/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { Row } from '../assets/components/Layout';
+import LoadingSpinner from '../assets/components/LoadingSpinner';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -93,13 +94,13 @@ const Login = () => {
       <FormGroup>
         <Row $justify="flex-start" $wrap="wrap">
           <AppButton
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded min-w-[100px] h-[45px]"
             title="Login"
             type="submit"
             id="in"
             disabled={!!loading}
           >
-            Login
+            {loading ? <LoadingSpinner /> : 'Login'}
           </AppButton>
           <a href="/signup">Sign Up</a>
         </Row>

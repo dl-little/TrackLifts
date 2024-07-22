@@ -13,6 +13,7 @@ import RenderIf from '../assets/components/RenderIf';
 import { useAuth } from '../assets/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { Row } from '../assets/components/Layout';
+import LoadingSpinner from '../assets/components/LoadingSpinner';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -50,7 +51,6 @@ const SignUp = () => {
         setLoading(false);
         const { message, target } = getErrorMessage(error.code);
         setErrorMessage(message);
-        console.log(error.code);
 
         if (target.length) {
           switch (target) {
@@ -96,13 +96,13 @@ const SignUp = () => {
       <FormGroup>
         <Row $justify="flex-start" $wrap="wrap">
           <AppButton
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded min-w-[100px] h-[45px]"
             title="Sign Up"
             type="submit"
             id="up"
             disabled={!!loading}
           >
-            Sign Up
+            {loading ? <LoadingSpinner /> : 'Sign Up'}
           </AppButton>
           <a href="/login">Login</a>
         </Row>
