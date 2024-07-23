@@ -63,3 +63,7 @@ body,
   width: 1px !important;
   color: #1f2933;
 }
+
+main > *:not(:first-child) {
+  @apply mt-4;
+}
